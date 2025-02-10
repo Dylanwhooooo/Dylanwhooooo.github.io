@@ -1,5 +1,7 @@
 body {
   background-color: #E6F0DC; /* Light gray background */
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 /* Topbar */
