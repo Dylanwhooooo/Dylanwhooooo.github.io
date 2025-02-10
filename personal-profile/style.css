@@ -7,8 +7,8 @@ body {
 /* Topbar */
 
 .topnav {
-    background-color: #9A6735;
-    overflow: hidden;
+    background-color: #35374B;
+    overflow: scroll;
   }
   
   /* Style the links inside the navigation bar */
