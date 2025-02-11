@@ -1,44 +1,66 @@
+:root{
+  --clr-body-bg: rgb(53, 55, 75);
+  --clr-container-bg: rgb(80, 114, 123);
+  --clr-word-color: rgb(120, 160, 131);
+  --clr-clrpicker: rgb(80, 114, 123);
+
+}
+
 body {
-  background-color: #35374B; /* Light gray background */
-  margin: 75px;
-  padding:30px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+  background-color: var(--clr-body-bg); /* Light gray background */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .container {
-  margin: auto;
-  border: 2px solid #50727B;
-  width: 600px;
-  height: 200vh;
-  border-radius: 50px;
-  z-index: -10
+  margin: 20px auto; 
+  border: 2px solid var(--clr-container-bg);
+  width: 90%; 
+  max-width: 600px;
+  min-height: 60vh; 
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box; 
 }
 
 .center {
   text-align: center;
 }
+
 h1 {
-  color: #ffffff;
+
+  color: var(--clr-word-color);
+  font-size: 20px;;
   z-index: 100;
 }
 
+h2 {
+  color: var(--clr-word-color);
+  font-size: 15px;
+}
+
+p {
+  color: var(--clr-word-color);
+}
+
 .headingbox {
-  width: 600px;
-  height: 10vh;
+  position: fixed;
+  width: 30%;
+  height: 10%;
+  background-color:white;
 }
 
 /* Topbar */
 .topnav {
   display: flex;
   justify-content: center;
-  position: sticky;
+  position: static;
   top: 0;
   z-index: 1000;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  color: #f2f2f2;
+  color: var(--clr-word-color);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -53,12 +75,85 @@ h1 {
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+  color: #78A083;
 }
 
 /* Container styling */
 .container {
   padding: 20px;
   text-align: center;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.colour-picker > fieldset {
+  position: fixed;
+  left: 50%; /* Move the element to the center of the viewport */
+  bottom: 0;
+  transform: translateX(-50%); /* Adjust for the element's own width */
+  border: 0;
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 3rem;
+  width: fit-content;
+  border-radius: 1rem 1rem 0 0;
+  background-color: var(--clr-clrpicker);
+}
+.colour-picker input[type="radio"] {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  outline: 3px solid var(--radio-colour, currentColor);
+  outline-offset: 3px;
+  border-radius: 50%;
+  color:black;
+}
+
+.colour-picker input[type="radio"]:checked {
+  background-color: var(--radio-colour);
+}
+.colour-picker input[type="radio"]#winter {
+  --radio-colour: white;
+}
+.colour-picker input[type="radio"]#summer {
+  --radio-colour: rgb(255, 125, 41);
+}
+.colour-picker input[type="radio"]#autumn {
+  --radio-colour: rgb(177, 116, 87);
+}
+.colour-picker input[type="radio"]#spring {
+  --radio-colour: rgb(82, 115, 77);
+}
+
+:root:has(#winter:checked) {
+  --clr-body-bg: rgb(241, 240, 232);
+  --clr-container-bg: rgb(179, 200, 207);
+  --clr-word-color: rgb(137, 168, 178);
+  --clr-clrpicker: rgb(229, 225, 218);
+}
+:root:has(#summer:checked) {
+  --clr-body-bg: rgb(254, 255, 210);
+  --clr-container-bg: rgb(255, 191, 120);
+  --clr-word-color: rgb(255, 125, 41);
+  --clr-clrpicker: rgb(255, 238, 169);
+}
+:root:has(#autumn:checked) {
+  --clr-body-bg: rgb(74, 73, 71);
+  --clr-container-bg: rgb(177, 116, 87);
+  --clr-word-color: rgb(250, 247, 240);
+  --clr-clrpicker: rgb(216, 210, 194);
+}
+:root:has(#spring:checked) {
+  --clr-body-bg: rgb(145, 199, 136);
+  --clr-container-bg: rgb(254, 255, 222);
+  --clr-word-color: rgb(254, 255, 222);  
+  --clr-clrpicker: rgb(254, 255, 222);
 }
