@@ -1,28 +1,37 @@
-const colorThemes = document.querySelectorAll('[name="theme"]');
+const colourThemes = document.querySelectorAll('[name="theme"]');
 
-// store theme
+// Store the selected theme in localStorage
 const storeTheme = function (theme) {
   localStorage.setItem("theme", theme);
 };
 
-// set theme when visitor returns
-const setTheme = function () {
-  const activeTheme = localStorage.getItem("theme");
-  colorThemes.forEach((themeOption) => {
-    if (themeOption.id === activeTheme) {
-      themeOption.checked = true;
-    }
-  });
-  // fallback for no :has() support
-  document.documentElement.className = activeTheme;
+// Apply the selected theme to the page
+const applyTheme = function (theme) {
+  document.documentElement.className = theme; // Apply the theme class to the <html> element
 };
 
-colorThemes.forEach((themeOption) => {
+// Load the saved theme when the page loads
+const loadTheme = function () {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    // Check the corresponding radio button
+    colourThemes.forEach((themeOption) => {
+      if (themeOption.id === savedTheme) {
+        themeOption.checked = true;
+      }
+    });
+    // Apply the saved theme
+    applyTheme(savedTheme);
+  }
+};
+
+// Add event listeners to theme options
+colourThemes.forEach((themeOption) => {
   themeOption.addEventListener("click", () => {
-    storeTheme(themeOption.id);
-    // fallback for no :has() support
-    document.documentElement.className = themeOption.id;
+    storeTheme(themeOption.id); // Save the selected theme
+    applyTheme(themeOption.id); // Apply the selected theme
   });
 });
 
-document.onload = setTheme();
+// Load the saved theme when the page loads
+window.addEventListener("load", loadTheme);

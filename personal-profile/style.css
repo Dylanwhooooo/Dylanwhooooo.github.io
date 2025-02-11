@@ -114,7 +114,6 @@ p {
   outline: 3px solid var(--radio-colour, currentColor);
   outline-offset: 3px;
   border-radius: 50%;
-  color:black;
 }
 
 .colour-picker input[type="radio"]:checked {
