@@ -1,13 +1,15 @@
+import 'https://tomashubelbauer.github.io/github-pages-local-storage/index.js';
+
 const colorThemes = document.querySelectorAll('[name="theme"]');
 
 // store theme
 const storeTheme = function (theme) {
-  sessionStorage.setItem("theme", theme);
+  localStorage.setItem("theme", theme);
 };
 
 // set theme when visitor returns
 const setTheme = function () {
-  const activeTheme = sessionStorage.getItem("theme");
+  const activeTheme = localStorage.getItem("theme");
   colorThemes.forEach((themeOption) => {
     if (themeOption.id === activeTheme) {
       themeOption.checked = true;
@@ -25,4 +27,4 @@ colorThemes.forEach((themeOption) => {
   });
 });
 
-document.onload = setTheme();
+window.addEventListener("load", setTheme);
