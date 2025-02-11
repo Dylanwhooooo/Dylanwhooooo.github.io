@@ -3,20 +3,54 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>projects</title>
+        <title>Projects</title>
         <link rel="stylesheet" href="./style.css"> <!-- Link to your CSS file -->
     </head>
-    <div class="topnav">
-        <a href="./">Main</a>
-        <a href="./about-me">About Me</a>
-        <a class="active" href="./projects">Projects</a>
-        <a href="./interests">Interests</a>
-      </div>
+
+    <form class="colour-picker" action="">
+        <fieldset>
+            <legend></legend>
+            <label for="autumn" class="visually-hidden">Autumn</label>
+            <input 
+                type="radio" 
+                name="theme"
+                id="autumn">
+
+                <label for="winter" class="visually-hidden">Winter</label>
+            <input 
+                type="radio" 
+                name="theme"
+                id="winter" >
+
+                <label for="spring" class="visually-hidden">Spring</label>
+            <input 
+                type="radio" 
+                name="theme"
+                id="spring" >
+
+                <label for="summer" class="visually-hidden">Summer</label>
+            <input 
+                type="radio" 
+                name="theme"
+                id="summer" checked>
+                
+        </fieldset>
+    </form>
+
     <body>
+
+            <div class="topnav">
+                <a href="./">🏠 Home</a>
+                <a href="./about-me">🫡 About Me</a>
+                <a class="active" href="./projects">⚒️ Projects</a>
+                <a href="./interests">⚽ Interests</a>
+            </div>
+
         <div class="container">
-            <h1>About Me</h1>
-            <p>Hi, I'm Dylan, 3rd year computer science student @ UNSW!</p>
-            <a href="./"><h2>Click here to return to main page</h2></a>
+            <div class="center">
+                <h2>Projects</h2>
+                <p></p>
+            </div>
         </div>
     </body>
 </html>

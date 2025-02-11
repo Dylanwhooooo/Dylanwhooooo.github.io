@@ -1,32 +1,28 @@
 const colorThemes = document.querySelectorAll('[name="theme"]');
 
-// Store theme in localStorage
+// store theme
 const storeTheme = function (theme) {
   localStorage.setItem("theme", theme);
 };
 
-// Set theme when the page loads
+// set theme when visitor returns
 const setTheme = function () {
   const activeTheme = localStorage.getItem("theme");
-  if (activeTheme) {
-    colorThemes.forEach((themeOption) => {
-      if (themeOption.id === activeTheme) {
-        themeOption.checked = true;
-      }
-    });
-    // Apply the theme class to the document element
-    document.documentElement.className = activeTheme;
-  }
+  colorThemes.forEach((themeOption) => {
+    if (themeOption.id === activeTheme) {
+      themeOption.checked = true;
+    }
+  });
+  // fallback for no :has() support
+  document.documentElement.className = activeTheme;
 };
 
-// Add event listeners to theme options
 colorThemes.forEach((themeOption) => {
   themeOption.addEventListener("click", () => {
     storeTheme(themeOption.id);
-    // Apply the theme class to the document element
+    // fallback for no :has() support
     document.documentElement.className = themeOption.id;
   });
 });
 
-// Set the theme when the page loads
-window.addEventListener("load", setTheme);
+document.onload = setTheme();
