@@ -40,6 +40,7 @@ h2 {
 
 p {
   color: var(--clr-word-color);
+  font-size: 15px;
 }
 
 .headingbox {
@@ -155,4 +156,11 @@ p {
   --clr-container-bg: rgb(254, 255, 222);
   --clr-word-color: rgb(254, 255, 222);  
   --clr-clrpicker: rgb(254, 255, 222);
+}
+
+.socialslink {
+  border: 0;
+  width: 45px;
+  height: 45px;
+  filter: var(--clr-word-color);
 }
