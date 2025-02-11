@@ -1,5 +1,5 @@
 const colourThemes = document.querySelectorAll('[name="theme"]');
-
+console.log("YOOOOOOOOOOOOOOOOO");
 // Store the selected theme in localStorage
 const storeTheme = function (theme) {
   localStorage.setItem("theme", theme);
