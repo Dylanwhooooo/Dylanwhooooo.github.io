@@ -158,9 +158,14 @@ p {
   --clr-clrpicker: rgb(254, 255, 222);
 }
 
-.socialslink {
+.png-container {
+  text-decoration: none;
+  display: inline-block;
+  line-height: 0;
+  padding: 3px;
   border: 0;
-  width: 45px;
-  height: 45px;
-  filter: var(--clr-word-color);
+}
+.png-container img {  
+  filter: drop-shadow(0px 1000px 0 var(--clr-word-color));
+  transform: translateY(-1000px);
 }
