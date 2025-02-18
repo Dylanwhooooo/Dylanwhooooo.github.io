@@ -55,7 +55,7 @@ const SPEED_MULTIPLIER = 1;
 function createParticleElement(country) {
   const img = document.createElement("img");
   // Replace spaces with hyphens if your file naming convention uses hyphens
-  img.src = `personal-profile/resources/flags/${country}.png`;
+  img.src = `./resources/flags/${country}.png`;
   
   // Set the image size and position styles
   img.style.width = "5%";
