@@ -237,7 +237,7 @@ canvas {
   height: 300px;
   margin: 10px;
   border-radius: 50px;
-  background-image: url(/resources/image-1.jpg);
+  background-image: url(./resources/image-1.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -245,22 +245,22 @@ canvas {
 }
 
 .img-box:nth-child(2) {
-  background-image: url(/resources/image-2.jpg);
+  background-image: url(./resources/image-2.jpg);
   background-size: cover;
   background-position: center;
 }
 .img-box:nth-child(3) {
-  background-image: url(/resources/image-3.jpg);
+  background-image: url(./resources/image-3.jpg);
   background-size: cover;
   background-position: center;
 }
 .img-box:nth-child(4) {
-  background-image: url(/resources/image-5.jpg);
+  background-image: url(./resources/image-5.jpg);
   background-size: cover;
   background-position: center;
 }
 .img-box:nth-child(5) {
-  background-image: url(/resources/image-6.jpg);
+  background-image: url(./resources/image-6.jpg);
   background-size: cover;
   background-position: center;
 }
