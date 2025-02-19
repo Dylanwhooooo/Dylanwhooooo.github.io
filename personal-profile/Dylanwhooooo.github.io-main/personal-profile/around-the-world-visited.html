@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Places I've Visited!</title>
+        <link rel="stylesheet" href="./style.css"> <!-- Link to your CSS file -->
+    </head>
+
+    <form class="colour-picker" action="">
+        <fieldset>
+            <legend></legend>
+            <label for="autumn" class="visually-hidden">Autumn</label>
+            <input 
+                type="radio" 
+                name="theme"
+                id="autumn">
+
+                <label for="winter" class="visually-hidden">Winter</label>
+            <input 
+                type="radio" 
+                name="theme"
+                id="winter" >
+
+                <label for="spring" class="visually-hidden">Spring</label>
+            <input 
+                type="radio" 
+                name="theme"
+                id="spring" >
+
+                <label for="summer" class="visually-hidden">Summer</label>
+            <input 
+                type="radio" 
+                name="theme"
+                id="summer" checked>
+        </fieldset>
+    </form>
+
+    <body>
+
+            <div class="topnav">
+                <a class="active" href="./">🏠 Home</a>
+                <a href="./about-me">🫡 About Me</a>
+                <a href="./projects">⚒️ Projects</a>
+                <a href="./interests">⚽ Interests</a>
+            </div>
+            <canvas id="animated-background"></canvas>
+            <div class="circles-container">
+                <span></span>
+            </div>
+        <div class="container">
+            <div class="center">
+                <h2>so far i've been to...</h2>
+                <p>australia!</p>
+                <p>china!</p>
+                <p>taiwan!</p>
+                <p>japan!</p>
+                <p>vanuatu!</p>
+                <p>papa new guinea!</p>
+                <p>singapore!</p>
+                <p>new caledonia!</p>
+                <p>malaysia!</p>
+                <p>hong kong!</p>
+                <p>philippines (layover) ((will go back soon))!</p>
+            </div>
+        </div>
+    <script src="./main.js"></script>
+</html>
